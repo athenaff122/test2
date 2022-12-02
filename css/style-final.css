@@ -1,0 +1,338 @@
+/* skip to main content */
+
+.skip a {
+    position: absolute;
+    top: -40px;
+    z-index: 3;
+    color: black;
+}
+.skip a:focus {
+    position: absolute;
+    top: 0;
+    color: black;
+ }
+
+/* normal setting */
+body {
+  background-color: #D6E4E5;
+  /* margin: 20px; */
+  /* padding: 20px; */
+  display: grid;
+  grid-template-rows: auto auto auto auto auto;
+}
+
+footer {
+    grid-row: 10;
+    grid-column: 1 / -1;
+    height: 45px;
+}
+
+h1 {
+  color: black;
+  font-size: 2em;
+  padding-top: 100px;
+  width: 100%;
+  font-family: Georgia;
+}
+
+h1.home{
+  text-align: left;
+}
+
+h2 {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  font-size: 18px;
+  line-height: 24px;
+  padding-bottom: 30px;
+  text-align: left;
+  width: 70%;
+  font-family: Helvetica;
+}
+
+p,h3 {
+  line-height: 1.3em;
+  text-align: left;
+  width: 100%;
+  font-weight: 100;
+  font-size: 18px;
+  line-height: 24px;
+  font-family: Lato, sans-serif;
+}
+
+
+/* navigation  */
+nav {
+  background-color: #457b9d;
+  position: fixed;
+  display: flex;
+  width: 100%;
+  top: 0;
+  grid-row: 1 / 2;
+  grid-column: 1 / -1;
+}
+
+nav a {
+  color: white;
+}
+
+
+nav ul {
+  justify-content: left;
+  display: flex;
+  flex-flow: column wrap;
+}
+
+nav ul li {
+  display: block;
+  padding: 1em;
+}
+
+/* current page setting */
+.current-page {
+    font-weight: bold;
+    background-color: #1d3557;
+    color: #f2f2f2;
+    border: 2px solid #D6E4E5;
+    border-radius: 15px;
+}
+
+/* index.html */
+/* background image */
+#hello{
+    background-image: url("../images/world_travel.jpeg");
+    background-color: #a8dadc;
+    height: 70vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: repeat-x;
+    background-size: cover;
+    grid-column:1/-1;
+    grid-row:1/2;
+}
+
+#self_emp1,#self_emp2{
+  color: #0D4C92;
+  font-weight: bold;
+}
+
+
+/* country.html */
+#country{
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: repeat-x;
+  background-size: cover;
+  grid-column:1/5;
+  grid-row:2/3;
+}
+
+#destination{
+  grid-row: 4/5;
+  grid-column: 1/-1;
+}
+
+/* gallery.html */
+.card{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat(9, auto);
+}
+
+img{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: auto;
+	width:400px;
+  /* margin-left: 2px; */
+  /* padding: 2px 2px 2px 2px; */
+  /* border: 1px dotted blue; */
+}
+
+img:hover{
+	border: 1px dotted blue;;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.col {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.content{
+  grid-column: 1 / -1;
+}
+
+#main-self {
+  grid-row: 3 / 4;
+  grid-column: 1 / -1;
+}
+
+.self-img{
+  grid-row: 4 / 5;
+  grid-column: 1 / -1;
+}
+
+/* lisbon.html-animiation */
+@keyframes zoomin {
+    from {
+        width: 30%;
+    }
+    to {
+        width: 35%;
+    }
+}
+
+#lisbon {
+    animation-name: zoomin;
+    animation-duration: 3.5s;
+    animation-timing-function: linear;
+}
+
+@media (prefers-reduced-motion) {
+    #lisbon {
+        animation: none;
+    }
+}
+
+/* test */
+#test{
+  display: grid;
+  grid-template-rows: auto auto auto auto auto;
+  grid-template-columns: auto auto auto auto auto;
+  }
+
+#test1 {
+  grid-row: 3 / 4;
+  grid-column: 1 / -1;
+}
+
+#test2 {
+  grid-row: 2 / 3;
+  grid-column: 1 / -1;
+}
+
+#test3 {
+  grid-row: 4 / -1;
+  grid-column: 1 / -1;
+}
+
+#navi-test{
+  grid-row: 1 / 2;
+  grid-column: 1 / -1;
+}
+
+@media screen and (min-width:600px) {
+  /* tablet view */
+body {
+    background-color: #D6E4E5;
+    /* margin: 20px; */
+    /* padding: 20px; */
+    display: grid;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-columns: auto auto auto auto auto;
+}
+#hello{
+    /* grid-row: 2 / 3;
+    grid-column: 1 / 3; */
+    grid-column:1/-1;
+    grid-row:2/3;
+}
+
+nav ul {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+/* #test{
+    display: grid;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-columns: auto auto auto auto auto;
+} */
+
+#test2 {
+    grid-row: 1 / 3;
+    grid-column: 1 / 3;
+}
+
+#test1 {
+    grid-row: 3 / 5;
+    grid-column: 1 / 3;
+}
+
+#test3 {
+    grid-row: 1 / 5;
+    grid-column: 3 / 6;
+}
+nav {
+  background-color: #457b9d;
+  position: fixed;
+  display: flex;
+  width: 100%;
+  top: 0;
+  grid-row: 1 / 2;
+  grid-column: 1 / -1;
+}
+}
+
+@media screen and (min-width:1000px) {
+  /* desktop view */
+body {
+    background-color: #D6E4E5;
+    /* margin: 20px; */
+    /* padding: 20px; */
+    display: grid;
+    grid-template-rows: auto auto auto auto auto;
+}
+
+#hello{
+  /* grid-row: 2 / 3;
+  grid-column: 1 / 5; */
+  grid-column:1/-1;
+  grid-row:1/2;
+}
+
+#main-self {
+  grid-row: 3 / -1;
+  grid-column: 3 / 5;
+  /* padding: 20px; */
+}
+
+.self-img{
+  grid-row: 3 / -1;
+  grid-column: 2 / 3;
+}
+
+/* navigation  */
+nav ul {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+#test1 {
+  grid-row: 2 / -1;
+  grid-column: 1 / 2;
+}
+
+#test2 {
+  grid-row: 2 / -1;
+  grid-column: 2 / 4;
+}
+
+#test3 {
+  grid-row: 2 / -1;
+  grid-column: 4 / 6;
+}
+
+nav {
+  grid-row: 1 / 2;
+  grid-column: 1 / -1;
+}
+
+}
